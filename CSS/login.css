@@ -1,0 +1,89 @@
+/* ===== Login Page ===== */
+
+/* Full page background */
+body {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login form container */
+.login-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 450px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  animation: fadeIn 0.9s ease;
+}
+
+/* Title */
+.login-card h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Input fields */
+.login-card .form-control {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff;
+}
+
+.login-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-card .form-control:focus {
+  background: rgba(255, 255, 255, 0.35);
+  outline: none;
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+/* Buttons */
+.login-card .btn-success {
+  background: #00c896;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.login-card .btn-success:hover {
+  background: #00a67c;
+  transform: translateY(-3px);
+}
+
+/* Checkbox label */
+.login-card .form-check-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Sign up link */
+.login-card p a {
+  color: #ffce54;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.login-card p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

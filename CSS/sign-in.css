@@ -1,0 +1,69 @@
+/* ===== Sign Up Page ===== */
+
+body {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.signin-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: slideUp 0.9s ease;
+}
+
+.signin-card h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d6efd;
+}
+
+.signin-card .form-control {
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.signin-card .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13,110,253,0.4);
+  outline: none;
+}
+
+.signin-card .btn-primary {
+  background: #0d6efd;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.signin-card .btn-primary:hover {
+  background: #6610f2;
+  transform: translateY(-3px);
+}
+
+.signin-card p a {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.signin-card p a:hover {
+  color: #6610f2;
+  text-decoration: underline;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

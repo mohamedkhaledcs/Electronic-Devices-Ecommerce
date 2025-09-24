@@ -1,0 +1,351 @@
+/* ===========================================
+          Root Variables (Branding)
+=========================================== */
+:root {
+  --primary-color: #0d6efd;   /* Bootstrap Primary */
+  --secondary-color: #6610f2;
+  --accent-color: #ff7f50;
+  --dark-color: #1c1c1c;
+  --light-color: #f8f9fa;
+  --muted-color: #6c757d;
+
+  --font-main: "Poppins", "Segoe UI", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  --shadow-light: 0 5px 15px rgba(0,0,0,0.08);
+  --shadow-heavy: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* ===========================================
+              Global Styles
+=========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.7;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--muted-color);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===========================================
+             Navbar Overrides
+=========================================== */
+.navbar {
+  transition: all 0.4s ease-in-out;
+  padding: 18px 0;
+  background: rgba(255,255,255,0.95) !important;
+}
+
+.navbar.scrolled {
+  background: rgba(255,255,255,0.98) !important;
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 10px 15px !important;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+  background: var(--primary-color);
+}
+
+/* ===========================================
+               Hero Section
+=========================================== */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 140px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-section .btn {
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  background: var(--accent-color);
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===========================================
+            Features Section
+=========================================== */
+.features {
+  padding: 90px 0;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.feature-box i {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.feature-box h5 {
+  margin: 15px 0;
+}
+
+/* ===========================================
+               Product Cards
+=========================================== */
+.product-card {
+  border: none !important;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-light);
+}
+
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 20px;
+}
+
+.product-card h5 {
+  font-weight: 600;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* ===========================================
+               Cart Page
+=========================================== */
+.cart-table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow-light);
+}
+
+.cart-table th {
+  background: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cart-table td,
+.cart-table th {
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px;
+}
+
+.cart-summary {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow-light);
+}
+
+.cart-summary h4 {
+  margin-bottom: 20px;
+}
+
+/* ===========================================
+               Contact Page
+=========================================== */
+.contact-info, .contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-light);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* ===========================================
+       Auth Pages (Sign-in & Login)
+=========================================== */
+.auth-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.auth-card .btn {
+  border-radius: 30px;
+  padding: 12px;
+}
+
+/* ===========================================
+                  Footer
+=========================================== */
+.footer {
+  background: var(--dark-color);
+  color: #ccc;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===========================================
+            Responsive Tweaks
+=========================================== */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    margin-bottom: 20px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 100px 0;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
