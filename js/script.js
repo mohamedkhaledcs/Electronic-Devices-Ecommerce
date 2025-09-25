@@ -325,7 +325,7 @@ window.updateNavCartCount = updateNavCartCount;
       const u=loadUsers().find(u=>u.email===e.value && u.password===p.value);
       if(!u) return alert('Invalid login');
       setCurrentUser({id:u.id,name:u.name,email:u.email});
-      alert('Welcome '+u.name); window.location='index.html';
+      alert('Welcome '+u.name); window.location='../index.html';
     });
   }
 
